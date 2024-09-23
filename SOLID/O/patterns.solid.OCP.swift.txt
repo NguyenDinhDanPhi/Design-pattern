@@ -57,20 +57,7 @@ class ProductFilter
     return result
   }
 
-  func filterBySizeAndColor(_ products: [Product], 
-    _ size: Size, _ color: Color) -> [Product]
-  {
-    var result = [Product]()
-    for p in products
-    {
-      if (p.size == size) && (p.color == color)
-      {
-        result.append(p)
-      }
-    }
-    return result
-  }
-}
+
 
 // Specification
 protocol Specification
@@ -167,13 +154,7 @@ func main()
   }
 
   let bf = BetterFilter()
-  print("Green products (new):")
-  for p in bf.filter(products, ColorSpecification(.green))
-  {
-    print(" - \(p.name) is green")
-  }
 
-  print("Large blue items")
   for p in bf.filter(products, 
     AndSpecification(
       ColorSpecification(.blue),

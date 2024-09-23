@@ -16,43 +16,25 @@ enum Level: String {
 enum Shape: String {
     case circle = "circle"
     case square = "square"
-    case retangle = "retangle"
+    case rectangle = "retangle"
 }
-
-class Toys
-{
-  var name: String
-  var shape: Shape
-  var level: Level
-
-  init(_ name: String, _ shape: Shape, _ level: Level)
-  {
-    self.name = name
-    self.shape = shape
-    self.level = level
-  }
-}
-
-// tách rời điều kiện kiểm tra,iúp định nghĩa tiêu chí kiểm tra một cách linh hoạt
-protocol Specification {
-    associatedtype T
-    func isSatisfied(_ item: T) -> Bool
-}
-
 
 protocol Filter {
     associatedtype T
     func filter<Spec: Specification>(_ item: [T], _ spec: Spec) -> [T] where Spec.T == T;
 }
 
-class ShapeSpecification: Specification {
-    
+
+class FilterToys: Filter {
     typealias T = Toys
-    let shape: Shape
-    init(shape: Shape) {
-        self.shape = shape
-    }
-    func isSatisfied(_ item: Toys) -> Bool {
-        return item.shape == shape
+   
+    func filter<Spec>(_ item: [Toys], _ spec: Spec) -> [Toys] where Spec : Specification, Toys == Spec.T {
+        var result = [Toys]()
+        for i in item {
+            if spec.isSatisfied(i) {
+                result.append(i)
+            }
+        }
+        return result
     }
 }

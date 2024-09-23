@@ -12,6 +12,9 @@
 		D09E89D92C9F09A7006A5FC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09E89D82C9F09A7006A5FC5 /* Assets.xcassets */; };
 		D09E89DC2C9F09A7006A5FC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09E89DB2C9F09A7006A5FC5 /* Preview Assets.xcassets */; };
 		D09E89E32C9F0C5D006A5FC5 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09E89E22C9F0C5D006A5FC5 /* Filter.swift */; };
+		D0BBDF6A2CA181B600E01231 /* Toys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BBDF692CA181B600E01231 /* Toys.swift */; };
+		D0BBDF6C2CA181D300E01231 /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BBDF6B2CA181D300E01231 /* Specification.swift */; };
+		D0BBDF6E2CA1858300E01231 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BBDF6D2CA1858300E01231 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		D09E89D82C9F09A7006A5FC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D09E89DB2C9F09A7006A5FC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D09E89E22C9F0C5D006A5FC5 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		D0BBDF692CA181B600E01231 /* Toys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toys.swift; sourceTree = "<group>"; };
+		D0BBDF6B2CA181D300E01231 /* Specification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specification.swift; sourceTree = "<group>"; };
+		D0BBDF6D2CA1858300E01231 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 				D09E89D82C9F09A7006A5FC5 /* Assets.xcassets */,
 				D09E89DA2C9F09A7006A5FC5 /* Preview Content */,
 				D09E89E22C9F0C5D006A5FC5 /* Filter.swift */,
+				D0BBDF692CA181B600E01231 /* Toys.swift */,
+				D0BBDF6B2CA181D300E01231 /* Specification.swift */,
+				D0BBDF6D2CA1858300E01231 /* ViewModel.swift */,
 			);
 			path = ClosePrinciple;
 			sourceTree = "<group>";
@@ -140,8 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0BBDF6A2CA181B600E01231 /* Toys.swift in Sources */,
+				D0BBDF6C2CA181D300E01231 /* Specification.swift in Sources */,
 				D09E89D72C9F09A5006A5FC5 /* ContentView.swift in Sources */,
 				D09E89E32C9F0C5D006A5FC5 /* Filter.swift in Sources */,
+				D0BBDF6E2CA1858300E01231 /* ViewModel.swift in Sources */,
 				D09E89D52C9F09A5006A5FC5 /* ClosePrincipleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +288,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ClosePrinciple/Preview Content\"";
+				DEVELOPMENT_TEAM = FZCMHM49LE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -304,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ClosePrinciple/Preview Content\"";
+				DEVELOPMENT_TEAM = FZCMHM49LE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
