@@ -13,28 +13,6 @@ protocol Specification {
     func isSatisfied(_ item: T) -> Bool
 }
 
-class ShapeSpecification: Specification {
-    
-    typealias T = Toys
-    let shape: Shape
-    init(shape: Shape) {
-        self.shape = shape
-    }
-    func isSatisfied(_ item: Toys) -> Bool {
-        return item.shape == shape
-    }
-}
-
-class LevelSpecification: Specification {
-    typealias T = Toys
-    let level: Level
-    init(level: Level) {
-        self.level = level
-    }
-    func isSatisfied(_ item: Toys) -> Bool {
-        return item.level == level
-    }
-}
 
 class AndSpecification<T,
   SpecA: Specification,
@@ -54,3 +32,18 @@ class AndSpecification<T,
   }
 }
 
+struct AnySpecification<T>: Specification {
+    private let _isSatisfied: (T) -> Bool
+    
+    init<S: Specification>(_ specification: S) where S.T == T {
+        self._isSatisfied = specification.isSatisfied
+    }
+    
+    init(_ closure: @escaping (T) -> Bool) {
+            self._isSatisfied = closure
+        }
+    
+    func isSatisfied(_ item: T) -> Bool {
+        return _isSatisfied(item)
+    }
+}

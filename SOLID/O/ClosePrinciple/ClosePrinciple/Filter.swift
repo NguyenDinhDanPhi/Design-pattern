@@ -8,12 +8,14 @@
 import Foundation
 
 enum Level: String {
+    case none = "none"
     case easy = "easy"
     case medium = "medium"
     case difficult = "difficult"
 }
 
 enum Shape: String {
+    case none = "none"
     case circle = "circle"
     case square = "square"
     case rectangle = "retangle"
